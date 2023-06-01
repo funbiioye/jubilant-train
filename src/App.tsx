@@ -1,12 +1,11 @@
-import Router from "./Router"
+import Router from './Router';
 
 function App() {
-
   return (
-    <div className='bg-white'>
+    <div style={{}}>
       <Router />
     </div>
   );
 }
 
-export default App
+export default App;

@@ -5,6 +5,7 @@ import ForgotPass from '../src/Screens/ForgotPass';
 import CheckMail from './Screens/CheckMail';
 import SetPass from './Screens/SetPass';
 import PassReset from './Screens/PassReset';
+import Footer from './components/Footer';
 
 
 
@@ -35,6 +36,10 @@ const Router = () => {
         <Route
           path='PassReset'
           element={<PassReset />}
+        />
+        <Route
+          path='Footer'
+          element={<Footer />}
         />
       </Routes>
     </BRouter>
