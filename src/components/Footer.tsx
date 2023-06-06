@@ -7,7 +7,7 @@ import linkedin from '../assets/Icons/linkedin.svg';
 
 const Footer = () => {
   return (
-    <div className='w-full h-[938px] bg-[#00359E] px-[16px] pt-[48px] md:px-[40px] font-inter text-[#ffffff]'>
+    <div className='w-full h-full md:h-[456px] bg-[#00359E] px-[16px] pt-[48px] md:px-[40px] font-inter text-[#ffffff]'>
       <div className='flex flex-col md:flex md:flex-row md:gap-12 border-b-[1px] border-[#ffffff] '>
         <div className='bg-[#00359E] md:flex-[0.40]'>
           <img

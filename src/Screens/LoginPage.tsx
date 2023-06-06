@@ -2,7 +2,7 @@ import Pishon from '../assets/Images/Pishon (1).svg';
 
 const LoginPage = () => {
   return (
-    <div className='grid grid-flow-col w-full h-screen py-24 bg-white justify-center font-inter text-sm overflow-auto '>
+    <div className='grid grid-flow-col w-full h-screen py-24 bg-white justify-center font-inter text-sm'>
       <div>
         <span className='flex justify-center text-center '>
           <img

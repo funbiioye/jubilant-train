@@ -5,7 +5,7 @@ import ForgotPass from '../src/Screens/ForgotPass';
 import CheckMail from './Screens/CheckMail';
 import SetPass from './Screens/SetPass';
 import PassReset from './Screens/PassReset';
-import Footer from './components/Footer';
+import Contact from './Screens/Contact';
 
 
 
@@ -38,8 +38,8 @@ const Router = () => {
           element={<PassReset />}
         />
         <Route
-          path='Footer'
-          element={<Footer />}
+          path='Contact'
+          element={<Contact />}
         />
       </Routes>
     </BRouter>
