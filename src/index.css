@@ -1,14 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'typeface-inter';
+@import "typeface-inter";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+@layer utilities {
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+}
 /* html,
 body {
   height: 100%;

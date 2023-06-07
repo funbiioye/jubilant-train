@@ -1,45 +1,65 @@
-import Pishon from '../assets/Images/Pishon (1).svg';
+import { useState } from "react";
+import Pishon from "../assets/Images/Pishon (1).svg";
 
-let links = [
-  { name: 'Marketplace', link: '#' },
-  { name: 'About Us', link: '#' },
-  { name: 'Contact Us', link: '#' },
-  { name: 'Blog', link: '#' },
+const links = [
+  { name: "Marketplace", link: "#" },
+  { name: "About Us", link: "#" },
+  { name: "Contact Us", link: "#" },
+  { name: "Blog", link: "#" },
 ];
 
 const TopNav = () => {
+  const [openNav, setOpenNav] = useState(false);
   return (
-    <div className='flex flex-col md:flex-row items-start md:items-centerjustify-start md:justify-between top-0 left-0 bg-[#ffffff] w-full h-[80px] border-b-[1px] border-b-[#F2F4F7] shadow-sm md:py-[21px] md:px-[112px]'>
-      <div className='flex flex-col md:flex  md:flex-row items-start md:justify-center'>
-        <span className='w-[102px] h-[38px] justify-center items-center cursor-pointer  '>
-          <img
-            src={Pishon}
-            alt=''
-          />
-        </span>
-        <div className='flex flex-col md:flex-row items-center justify-center '>
-          <ul className='grid grid-flow-row md:flex justify-start md:items-center my-[32px] md:mt-[0] w-full relative md:static bg-white md:z-auto left-0'>
-            {links.map((link) => (
-              <li
-                key={link.name}
-                className='grid grid-flow-row md:flex  md:mx-[32px] py-[20px] md:py-[10px]  font-inter font-semibold text-base text-[#475467] h-[24px]'>
-                <a href={link.link}>{link.name}</a>
-              </li>
-            ))}
-          </ul>
+    <>
+      <div
+        className={` bg-[#ffffff] w-full h-screen fixed inset-0 lg:relative lg:h-[80px] border-b border-b-[#F2F4F7] shadow-sm md:py-[21px] duration-300 ${
+          openNav ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+        }`}
+      >
+        <div className="container flex flex-col lg:flex-row lg:justify-between gap-6 lg:items-center my-24 lg:my-0">
+          <div
+            className="absolute right-4 top-4 lg:hidden"
+            onClick={() => setOpenNav(false)}
+          >
+            X
+          </div>
+          <div className="flex flex-col gap-6 lg:flex-row  lg:items-center lg:justify-center">
+            <span className="lg:w-[102px] h-[38px] flex justify-center items-center  cursor-pointer  ">
+              <img src={Pishon} alt="" />
+            </span>
+            <div className="flex flex-col lg:flex-row items-center ">
+              <ul className="flex lg:items-center flex-col lg:flex-row gap-8 w-full relative  bg-white ">
+                {links.map((link) => (
+                  <li
+                    key={link.name}
+                    className="   font-inter font-semibold text-base  text-[#475467] "
+                  >
+                    <a href={link.link}>{link.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className=" lg:flex lg:items-center justify-center relative md:static bg-white md:z-auto w-full lg:w-auto ">
+            <span className="flex flex-col-reverse gap-6 lg:flex-row items-start lg:items-center justify-start lg:justify-center ">
+              <button className=" font-inter font-semibold  text-[#475467] lg:w-[95px] px-4 py-2 bg-[#FFFFFF]  border lg:border-none border-[#00359E] rounded-lg  w-full">
+                Log in
+              </button>
+              <button className=" font-inter font-semibold text-base text-white w-full lg:w-[95px]  px-4 py-2 bg-[#00359E] border rounded-lg shadow-sm">
+                Sign up
+              </button>
+            </span>
+          </div>
         </div>
       </div>
-      <div className=' md:flex md:items-center justify-center relative md:static bg-white md:z-auto left-0'>
-        <span className='flex flex-col-reverse  md:flex-row items-start md:items-center justify-start md:justify-center'>
-          <button className='flex flex-row justify-center items-center font-inter font-semibold text-base text-[#475467] md:w-[95px] md:h-[44px] px-[10px] bg-[#FFFFFF] border-[1px] border-none rounded-lg '>
-            Log in
-          </button>
-          <button className='flex flex-row justify-center items-center font-inter font-semibold text-base text-[#ffffff] md:w-[95px] md:h-[44px] px-[10px] bg-[#00359E] border-[1px] rounded-lg shadow-sm'>
-            Sign up
-          </button>
+      <div className="flex justify-between lg:hidden container">
+        <span className="w-[102px] h-[38px] justify-center items-center cursor-pointer  ">
+          <img src={Pishon} alt="" />
         </span>
+        <p onClick={() => setOpenNav(true)}>Test</p>
       </div>
-    </div>
+    </>
   );
 };
 
