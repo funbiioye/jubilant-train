@@ -137,8 +137,7 @@ const Contact = () => {
           alt=''
         />
       </div>
-      <div className=' flex flex-col justify-center items-center h-[270px] md:w-[1,216px] md:h-[302px]  my-[64px] py-[40px] md:py-[64px] bg-[#F9FAFB] mx-[16px] md:mx-[112px]'>
-        <p className='font-semibold text-[#101828] text-[30px] leading-[38px] md:text-[36px] md:leading-[44px] text-center'>
+     <p className='font-semibold text-[#101828] text-[30px] leading-[38px] md:text-[36px] md:leading-[44px] text-center'>
           Start your journey to financial freedom
         </p>
         <h1
@@ -150,7 +149,8 @@ const Contact = () => {
           Get Started
         </button>
       </div>
-      <Footer />
+      <Footer />      <div className=' flex flex-col justify-center items-center h-[270px] md:w-[1,216px] md:h-[302px]  my-[64px] py-[40px] md:py-[64px] bg-[#F9FAFB] mx-[16px] md:mx-[112px]'>
+   
     </div>
   );
 };
