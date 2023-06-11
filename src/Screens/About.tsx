@@ -1,11 +1,22 @@
+import React, { useState } from 'react';
+
 import image from '../assets/Images/image (1).svg';
 import flutterwave from '../assets/Images/Flutterwave Logo-2 1.svg';
 import paystack from '../assets/Images/Group 1.svg';
+import TopNav from '../components/TopNav';
 import Footer from '../components/Footer';
+import arrowdown from '../assets/Icons/arrowdown.svg';
 
 const About = () => {
+  const [isHidden, setIsHidden] = useState(true);
+
+  const toggleHiddenContent = () => {
+    setIsHidden(!isHidden);
+  };
+
   return (
     <div>
+      <TopNav />
       <div className='flex flex-col justify-center items-center w-full pt-[64px] md:py-[96px] font-inter px-[16px]'>
         <p className='font-semibold text-[14px] leading-[20px] md:text-base text-[#00359E] text-center'>
           About us
@@ -63,7 +74,7 @@ const About = () => {
 ]'>
             We’re just getting started
           </h1>
-          <p className='pt-[16px] md:pt-[64px]'>
+          <p className='pt-[16px] md:pt-[64px] font-normal text-[18px] leading-[28px]'>
             To greatly improve the quality of life of Pishon investors. We are
             on a mission to help our users achieve financial freedom. With the
             strategy of compound interest, a Pishon user can attain financial
@@ -74,18 +85,52 @@ const About = () => {
           </p>
         </span>
       </div>
-      <div className='font-semibold text-[14px] leading-[20px] md:text-base text-[#00359E] text-center h-[462px] md:h-[390px]'>
+      <div className='flex flex-col items-center font-semibold text-[14px] leading-[20px] md:text-base text-[#00359E] text-center h-[462px] md:h-[390px] px-[16px] md:px-[112px]'>
         <h1
           className='font-semibold text-[#101828] text-[30px] leading-[38px] md:text-[36px] md:leading-[44px] text-center
 ]'>
           Open positions
         </h1>
-        <p className='h-[56px] md:h-[30px]  font-semibold text-[18px] leading-[28px] md:text-[20px] md:leading-[30px] text-[#475467] text-center mt-[16px] md:mt-[20px]'>
+        <p className='h-[112px] md:h-[60px] md:w-[768px]  font-semibold text-[18px] leading-[28px] md:text-[20px] md:leading-[30px] text-[#475467]  mt-[16px] md:mt-[20px] text-center'>
           Want to work with some of the best global talent and build software
           used by all the companies you know and love? Join the team — we’re
           hiring!
         </p>
+        <div className='flex flex-col md:flex-row py-[48px] md:py-[64px]'>
+          <button
+            className='flex items-center justify-start md:justify-center font-inter px-[14px] py-[10px] md:px-0 md:py-0 md:bg-[#EFF4FF] border-2 rounded-lg bg-[#FFF] md:text-[#00359E] text-[#101828] w-[343px] h-[44px] md:w-[89px] '
+            onClick={toggleHiddenContent}>
+            View all
+            <img
+              className='ml-[240px] md:hidden'
+              src={arrowdown}
+            />
+          </button>
+          {!isHidden && (
+            <div className='flex flex-col md:flex-row justify-center items-center '>
+              <p className='text-center md:ml-[36px] mt-[20px] md:mt-0 text-[#667085] text-[16px] font-semibold leading-[24px]'>
+                Design
+              </p>
+              <p className='text-center md:ml-[36px] mt-[20px] md:mt-0 text-[#667085] text-[16px] font-semibold leading-[24px]'>
+                Software Engineering
+              </p>
+              <p className='text-center md:ml-[36px] mt-[20px] md:mt-0 text-[#667085] text-[16px] font-semibold leading-[24px]'>
+                Customer Success
+              </p>
+              <p className='text-center md:ml-[36px] mt-[20px] md:mt-0 text-[#667085] text-[16px] font-semibold leading-[24px]'>
+                Sales
+              </p>
+              <p className='text-center md:ml-[36px] mt-[20px] md:mt-0 text-[#667085] text-[16px] font-semibold leading-[24px]'>
+                Marketing
+              </p>
+            </div>
+          )}
+        </div>
       </div>
+      <p className='text-center font-normal text-[20px] text-[#667085] leading-[30px]'>
+        {' '}
+        No open positions for now!!!{' '}
+      </p>
       <div className=' flex flex-col justify-center items-center h-[270px] md:w-[1,216px] md:h-[302px]  my-[64px] py-[40px] md:py-[64px] bg-[#F9FAFB] mx-[16px] md:mx-[112px]'>
         <p className='font-semibold text-[#101828] text-[30px] leading-[38px] md:text-[36px] md:leading-[44px] text-center'>
           Start your journey to financial freedom

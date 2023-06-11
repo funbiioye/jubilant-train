@@ -153,7 +153,6 @@ const Contact = () => {
         </button>
       </div>
       <Footer />{' '}
-      <div className=' flex flex-col justify-center items-center h-[270px] md:w-[1,216px] md:h-[302px]  my-[64px] py-[40px] md:py-[64px] bg-[#F9FAFB] mx-[16px] md:mx-[112px]'></div>
     </div>
   );
 };

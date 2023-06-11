@@ -6,6 +6,11 @@ import CheckMail from './Screens/CheckMail';
 import SetPass from './Screens/SetPass';
 import PassReset from './Screens/PassReset';
 import About from './Screens/About';
+import Contact from './Screens/Contact';
+import PolicyPage from './Screens/PolicyPage';
+import Cookies from './Screens/Cookies';
+import Terms from './Screens/Terms';
+import FAQs from './Screens/FAQs';
 
 
 
@@ -38,8 +43,28 @@ const Router = () => {
           element={<PassReset />}
         />
         <Route
+          path='Contact'
+          element={<Contact />}
+        />
+        <Route
           path='About'
           element={<About />}
+        />
+        <Route
+          path='PolicyPage'
+          element={<PolicyPage />}
+        />
+        <Route
+          path='Cookies'
+          element={<Cookies />}
+        />
+        <Route
+          path='Terms'
+          element={<Terms />}
+        />
+        <Route
+          path='FAQs'
+          element={<FAQs />}
         />
       </Routes>
     </BRouter>
