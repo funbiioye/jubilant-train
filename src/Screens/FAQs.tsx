@@ -83,8 +83,8 @@ const FAQs = () => {
             </button>
           </div>
         </div>
-        <div className='w-full my-[64px] md:my-[96px] flex flex-col justify-center items-center'>
-          <h1 className='font-semibold text-[#101828] text-[30px] leading-[38px] md:text-[36px] md:leading-[44px] text-center'>
+        <div className=' my-[64px] md:my-[96px] flex flex-col justify-center items-center px-[16px]'>
+          <h1 className='font-semibold text-[#101828] text-[30px] leading-[38px] md:text-[36px] md:leading-[44px] text-center '>
             Sign up for our newsletter
           </h1>
           <p
@@ -102,13 +102,13 @@ const FAQs = () => {
                 We care about your data in our{' '}
                 <a
                   className='border-b-2 border-[#475467] text-[#475467]'
-                  href=''>
+                  href='#'>
                   privacy policy
                 </a>
                 .
               </p>
             </span>
-            <button className='justify-center items-center text-center border-2 w-[343px] md:w-[129px] h-[48px] py-[10px] bg-[#00359E] font-inter font-semibold text-[16px] text-[#FFFFFF] leading-[24px] rounded-lg'>
+            <button className='justify-center items-center text-center border-2 w-[343px] md:w-[119px] h-[48px] py-[10px] bg-[#00359E] font-inter font-semibold text-[16px] text-[#FFFFFF] leading-[24px] rounded-lg'>
               Subscribe
             </button>
           </div>
