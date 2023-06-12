@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import image from '../assets/Images/image (1).svg';
 import flutterwave from '../assets/Images/Flutterwave Logo-2 1.svg';
