@@ -134,7 +134,7 @@ function SignUp() {
               Already have an account?
               <a
                 className='text-[#00359E] text-[14px] font-semibold leading-[20px] ml-[4px]'
-                href='LoginPage'>
+                href='/loginpage'>
                 Log in
               </a>
             </p>

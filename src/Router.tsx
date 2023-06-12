@@ -18,7 +18,7 @@ const Router = () => {
     <BRouter>
       <Routes>
         <Route
-          path='/'
+          path='/homepage'
           element={<HomePage />}
         />
         <Route
