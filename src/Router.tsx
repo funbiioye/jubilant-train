@@ -11,6 +11,7 @@ import PolicyPage from './Screens/PolicyPage';
 import Cookies from './Screens/Cookies';
 import Terms from './Screens/Terms';
 import FAQs from './Screens/FAQs';
+import HomePage from './Screens/HomePage';
 
 
 
@@ -20,6 +21,10 @@ const Router = () => {
       <Routes>
         <Route
           path='/'
+          element={<HomePage />}
+        />
+        <Route
+          path='Signup'
           element={<SignUp />}
         />
         <Route
