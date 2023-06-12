@@ -1,7 +1,7 @@
 import { BrowserRouter as BRouter, Routes, Route } from 'react-router-dom';
 import SignUp from '../src/Screens/SignUp';
 import LoginPage from '../src/Screens/LoginPage';
-import ForgotPass from '../src/Screens/ForgotPass'; 
+import ForgotPass from '../src/Screens/ForgotPass';
 import CheckMail from './Screens/CheckMail';
 import SetPass from './Screens/SetPass';
 import PassReset from './Screens/PassReset';
@@ -13,8 +13,6 @@ import Terms from './Screens/Terms';
 import FAQs from './Screens/FAQs';
 import HomePage from './Screens/HomePage';
 
-
-
 const Router = () => {
   return (
     <BRouter>
@@ -24,56 +22,56 @@ const Router = () => {
           element={<HomePage />}
         />
         <Route
-          path='Signup'
+          path='/signup'
           element={<SignUp />}
         />
         <Route
-          path='LoginPage'
+          path='/loginpage'
           element={<LoginPage />}
         />
         <Route
-          path='ForgotPass'
+          path='/forgotpass'
           element={<ForgotPass />}
         />
         <Route
-          path='CheckMail'
+          path='/Checkmail'
           element={<CheckMail />}
         />
         <Route
-          path='SetPass'
+          path='/setpass'
           element={<SetPass />}
         />
         <Route
-          path='PassReset'
+          path='/passreset'
           element={<PassReset />}
         />
         <Route
-          path='Contact'
+          path='/contact'
           element={<Contact />}
         />
         <Route
-          path='About'
+          path='/about'
           element={<About />}
         />
         <Route
-          path='PolicyPage'
+          path='/policypage'
           element={<PolicyPage />}
         />
         <Route
-          path='Cookies'
+          path='/cookies'
           element={<Cookies />}
         />
         <Route
-          path='Terms'
+          path='/terms'
           element={<Terms />}
         />
         <Route
-          path='FAQs'
+          path='/faqs'
           element={<FAQs />}
         />
       </Routes>
     </BRouter>
   );
-}
+};
 
-export default Router
+export default Router;
